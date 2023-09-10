@@ -41,6 +41,24 @@ For example, to add the `Recipe` app, run the following command:
 docker-compose run --rm app sh -c "python manage.py startapp recipe"
 ```
 
+Then change into the directory and remove uneeded files:
+
+```bash
+cd app/recipe
+rm -rf admin.py migrations models.py tests.py
+mkdir tests
+touch tests/__init__.py
+```
+
+Then add the app into the `app/app/settings.py` file:
+
+```python
+INSTALLED_APPS = [
+    # ...
+    'recipe',
+]
+```
+
 ## Testing
 
 To run tests, run the following command:
