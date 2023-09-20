@@ -72,7 +72,7 @@ docker-compose run --rm app sh -c "python manage.py test"
 Just lint:
 
 ```bash
-docker-compose run --rm app sh -c "python manage.py && flake8"
+docker-compose run --rm app sh -c "python manage.py test && flake8"
 ```
 
 Test and lint:
